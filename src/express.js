@@ -12,7 +12,7 @@ const productRoutes = require('./routes/product.routes')
 
 const CURRENT_WORKING_DIR = process.cwd()
 const app = express()
-
+app.use(cors())
 // parse body params and attache them to req.body
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -21,14 +21,6 @@ app.use(compress())
 // secure apps by setting various HTTP headers
 app.use(helmet())
 // enable CORS - Cross Origin Resource Sharing
-app.use(
-  cors({
-    origin: 'https://60b4a6342e9d1414e88eef53--nervous-boyd-fdc90b.netlify.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    preflightContinue: true,
-    optionsSuccessStatus: 204,
-  })
-)
 
 // mount routes
 app.use('/', userRoutes)

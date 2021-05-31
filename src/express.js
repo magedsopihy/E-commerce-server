@@ -12,7 +12,6 @@ const productRoutes = require('./routes/product.routes')
 
 const CURRENT_WORKING_DIR = process.cwd()
 const app = express()
-app.use(cors({ origin: true }))
 
 // parse body params and attache them to req.body
 app.use(bodyParser.json())
@@ -28,7 +27,7 @@ app.use('/', userRoutes)
 app.use('/', authRoutes)
 app.use('/', shopRoutes)
 app.use('/', productRoutes)
-
+app.use(cors({ origin: true }))
 // Catch unauthorised errors
 app.use((err, req, res, next) => {
   if (err.name === 'UnauthorizedError') {

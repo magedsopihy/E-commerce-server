@@ -23,7 +23,7 @@ const signin = async (req, res) => {
       {
         _id: user._id,
       },
-      config.jwtSecret
+      process.env.JWT_SECRET
     )
 
     res.cookie('t', token, {
@@ -55,7 +55,7 @@ const signout = (req, res) => {
 }
 
 const requireSignin = expressJwt({
-  secret: config.jwtSecret,
+  secret: process.env.JWT_SECRET,
   userProperty: 'auth',
 })
 

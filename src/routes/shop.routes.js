@@ -2,7 +2,7 @@ const express = require('express')
 const authCtrl = require('../controllers/auth.controller')
 const userCtrl = require('../controllers/user.controller')
 const shopCtrl = require('../controllers/shop.controller')
-const parser = require('./../../config/cloudinary')
+const parser = require('../../config/cloudinary')
 
 const router = express.Router()
 

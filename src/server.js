@@ -1,4 +1,3 @@
-const config = require('./../config/config')
 const app = require('./express')
 const mongoose = require('mongoose')
 
@@ -11,7 +10,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   useFindAndModify: false,
 })
 mongoose.connection.on('error', () => {
-  throw new Error(`unable to connect to database: ${config.mongoUri}`)
+  throw new Error(`unable to connect to database: ${process.env.MONGODB_URI}`)
 })
 app.get('/', (req, res) => res.send('E-commerce api'))
 

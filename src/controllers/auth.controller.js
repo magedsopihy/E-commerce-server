@@ -1,6 +1,7 @@
 const User = require('../models/user.model')
 const jwt = require('jsonwebtoken')
 const expressJwt = require('express-jwt')
+require('dotenv').config()
 
 const signin = async (req, res) => {
   try {

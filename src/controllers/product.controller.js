@@ -149,6 +149,7 @@ const list = async (req, res) => {
 const listCategories = async (req, res) => {
   try {
     let categories = await Product.distinct('category', {})
+    console.log(categories)
     res.json(categories)
   } catch (err) {
     return res.status(400).json({

@@ -21,7 +21,11 @@ app.use(compress())
 // secure apps by setting various HTTP headers
 app.use(helmet())
 // enable CORS - Cross Origin Resource Sharing
-app.use(cors())
+app.use(
+  cors({
+    origin: 'https://60b4a6342e9d1414e88eef53--nervous-boyd-fdc90b.netlify.app',
+  })
+)
 
 // mount routes
 app.use('/', userRoutes)

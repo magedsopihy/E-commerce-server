@@ -12,7 +12,7 @@ const productRoutes = require('./routes/product.routes')
 
 const CURRENT_WORKING_DIR = process.cwd()
 const app = express()
-app.use(cors())
+app.use(cors({ origin: true }))
 
 // parse body params and attache them to req.body
 app.use(bodyParser.json())

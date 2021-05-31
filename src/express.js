@@ -24,6 +24,9 @@ app.use(helmet())
 app.use(
   cors({
     origin: 'https://60b4a6342e9d1414e88eef53--nervous-boyd-fdc90b.netlify.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    preflightContinue: true,
+    optionsSuccessStatus: 204,
   })
 )
 

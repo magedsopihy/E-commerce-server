@@ -11,7 +11,12 @@ const shopRoutes = require('./routes/shop.routes')
 const productRoutes = require('./routes/product.routes')
 
 const app = express()
-
+const corsOptions = {
+  origin: 'https://60b550d95fa6c485892537bb--sopihy-ecommerce.netlify.app/',
+  optionsSuccessStatus: 200,
+  methods: 'GET, PUT, POST, DELETE',
+}
+app.use(cors(corsOptions))
 // parse body params and attache them to req.body
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))

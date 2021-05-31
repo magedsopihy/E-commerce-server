@@ -2,8 +2,6 @@ const app = require('./express')
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-app.use(cors())
-app.options('*', cors())
 // Connection URL
 // mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGODB_URI, {

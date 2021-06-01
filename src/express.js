@@ -18,6 +18,7 @@ const corsOptions = {
   credentials: true,
 }
 app.use(cors(corsOptions))
+app.options('*', cors())
 // parse body params and attache them to req.body
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))

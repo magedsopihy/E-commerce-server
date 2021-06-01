@@ -12,7 +12,7 @@ const productRoutes = require('./routes/product.routes')
 
 const app = express()
 const corsOptions = {
-  origin: 'https://60b550d95fa6c485892537bb--sopihy-ecommerce.netlify.app/',
+  origin: 'https://60b550d95fa6c485892537bb--sopihy-ecommerce.netlify.app',
   optionsSuccessStatus: 200,
   methods: 'GET, PUT, POST, DELETE',
   credentials: true,

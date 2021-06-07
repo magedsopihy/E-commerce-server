@@ -34,22 +34,12 @@ const shopByID = async (req, res, next, id) => {
   }
 }
 
-const photo = (req, res, next) => {
-  if (req.shop.image.data) {
-    res.set('Content-Type', req.shop.image.contentType)
-    return res.send(req.shop.image.data)
-  }
-  next()
-}
-const defaultPhoto = (req, res) => {
-  return res.sendFile(process.cwd() + defaultImage)
-}
-
 const read = (req, res) => {
   return res.json(req.shop)
 }
 
 const update = async (req, res) => {
+  console.log(req.body)
   let shop = req.shop
   shop = Object.assign(shop, req.body)
   if (req.file) {
@@ -120,8 +110,6 @@ const isOwner = (req, res, next) => {
 module.exports = {
   create,
   shopByID,
-  photo,
-  defaultPhoto,
   list,
   listByOwner,
   read,

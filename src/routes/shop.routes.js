@@ -16,8 +16,6 @@ router
   )
   .get(authCtrl.requireSignin, authCtrl.hasAuthorization, shopCtrl.listByOwner)
 
-router.route('/api/shops/logo/:shopId').get(shopCtrl.photo)
-
 router.route('/api/shop/:shopId').get(shopCtrl.read)
 
 router

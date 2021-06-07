@@ -54,7 +54,7 @@ const list = async (req, res) => {
 const update = async (req, res) => {
   try {
     let user = req.profile
-    user = extend(user, req.body)
+    user = Object.assign(user, req.body)
     user.updated = Date.now()
     await user.save()
     user.hashed_password = undefined

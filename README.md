@@ -26,7 +26,7 @@ see live version at https://sopihy-ecommerce.netlify.app/
 ---
 
 ## Technologies
- -node 12.19.0.
+ - node 12.19.0.
  - express 4.17.1.
  - mongoose" 5.12.6.
  

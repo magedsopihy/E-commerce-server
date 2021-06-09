@@ -44,3 +44,4 @@ see live version at https://sopihy-ecommerce.netlify.app/
 
 Clone this repo to your desktop and run npm install to install all the dependencies.<br />
 install nodemon as a dev dependency and run npm run dev.
+make account on cloudinary platform and set up your api name, key and secert.
